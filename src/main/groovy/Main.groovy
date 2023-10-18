@@ -15,13 +15,12 @@ static void main(String[] args) {
 
 class Example {
     def getMap(collection) {
-        try {
-            def map = [:].withDefault { 0 }
-            collection.each { it -> map[it]++ }
-            return map
-        } catch (NullPointerException e) {
+        if (collection == null) {
             println("Передан null")
             return null
         }
+        def map = [:].withDefault { 0 }
+        collection.each { it -> map[it]++ }
+        return map
     }
 }

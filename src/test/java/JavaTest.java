@@ -16,7 +16,8 @@ public class JavaTest {
         assertAll(
                 () -> assertEquals(Map.of(1, 3), exampleJava.getHashMap(arr), "Тест не прошел"),
                 () -> assertEquals(Map.of(1, 1, 2, 1, 3, 1), exampleJava.getHashMap(arr2), "Тест не прошел"),
-                () -> assertEquals(Map.of(1, 2, 2, 2, 3, 2), exampleJava.getHashMap(arr3), "Тест не прошел")
+                () -> assertEquals(Map.of(1, 2, 2, 2, 3, 2), exampleJava.getHashMap(arr3), "Тест не прошел"),
+                () -> assertEquals(null, exampleJava.getHashMap(null), "Тест не прошел")
         );
     }
 }
